@@ -1,0 +1,109 @@
+.intro {
+  display: flex;
+  height: 100vh;
+}
+
+.iLeft {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iRight {
+  flex: 1;
+  position: relative;
+}
+
+.iLeft-wrapper {
+  padding: 50px;
+  height: 50%;
+  /* background-color: orange; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* it was justify content :spacebetween but it was showing lot of space so change to evenly */
+}
+.iIntro {
+  font-size: 30px;
+  font-weight: 300;
+}
+.iName {
+  font-size: 60px;
+}
+.iTitle {
+  height: 50px;
+  overflow: hidden;
+}
+
+.iTitle-wrapper {
+  height: 100%;
+  animation: move 10s ease-in-out infinite alternate;
+}
+
+@keyframes move {
+  25% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  75% {
+    transform: translateY(-150px);
+  }
+  100% {
+    transform: translateY(-200px);
+  }
+}
+
+.iTitle-item {
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(182, 33, 33);
+  display: flex;
+  align-items: center;
+}
+
+.iScroll {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 20px;
+}
+
+.iImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* it was objectfit cover but due to change in image effect was different */
+  position: absolute;
+}
+
+.iBg {
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 43% 49%);
+  background-color: rgb(205, 131, 41);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .intro {
+    flex-direction: column;
+  }
+
+  .iLeft-wrapper {
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+  }
+
+  .iDesc {
+    display: none;
+  }
+}

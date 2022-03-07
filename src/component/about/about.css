@@ -1,0 +1,69 @@
+.about {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.aLeft {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; 
+  height: 100%;
+}
+
+.aRight { 
+  flex: 1;
+}
+
+.aCard.bg {
+  position: absolute;
+  top: 60px;
+  left: 80px;
+  background-color: rgb(203, 147, 62);
+}
+
+.aCard {
+  width: 70%;
+  height: 70vh;
+  border-radius: 30px;
+  position: absolute;
+  overflow: hidden;
+}
+.about img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aCard img{
+    width: 100%;
+    height: 100%;
+   border-radius: 20px;
+
+}
+
+@media screen and (max-width:480px) {
+  .about{
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .aLeft {
+    width: 100%;
+  }
+
+  .aCard {
+    height: 30vh;
+  }
+
+  .aCard.bg {
+    display: none;
+  }
+
+  .aRight{
+    padding: 20px;
+  }
+}
