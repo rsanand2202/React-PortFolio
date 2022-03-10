@@ -1,7 +1,7 @@
 import React from 'react'
-import "./product.css"
+import "./project.css"
 
-const product = ({img,link}) => {
+const project = ({img,link}) => {
   return (
     <div className="project">
       <div className="pBrowser">
@@ -16,4 +16,4 @@ const product = ({img,link}) => {
   )
 }
 
-export default product;
+export default project;
